@@ -1,2 +1,4 @@
-# ericko-interior-design
+# Jsons Interiors
+
+## Interior Design Company Website
 
