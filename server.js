@@ -13,17 +13,17 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, 'assets')))
-app.use(express.urlencoded({ extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
 app.use('/', routes)
 
 app.listen(PORT, (err) => {
-    if(!err){
+    if (!err) {
         console.log(`___________________________________________________________`)
-        console.log(`Application server initiated at port: ${PORT}`)
-    } else{
+        console.log(`> Application server initiated at port: ${PORT}`)
+    } else {
         console.log(`___________________________________________________________`)
-        console.log(`Error occured while starting the application server > ${err}`)
+        console.log(`> Error occured while starting the application server > ${err}`)
         console.log(`___________________________________________________________`)
     }
 })
