@@ -3,6 +3,7 @@ const path = require('path')
 const body = require('body-parser')
 const routes = require('./routes/index')
 
+require('dotenv').config()
 require('./models/index')
 
 const PORT = process.env.PORT || 5000
@@ -13,7 +14,7 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, 'assets')))
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
 
 app.use('/', routes)
 

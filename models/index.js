@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://ericko:ericko_db123@localhost:27017/interior-design?authSource=admin',
-    //await Mongoose.connect('mongodb://admin:1234@server-db:27017/server-db?authSource=admin')
+mongoose.connect(process.env.MONGODB_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
